@@ -1,0 +1,282 @@
+.pdf-container {
+    .jIjGIn {
+        padding: 7rem 2rem;
+        background: linear-gradient(327deg, #9963fd 0%, #2e1065 100%);
+        color: #FFFFFF;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+    }
+}
+
+.pdf-controls {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.navigation-controls,
+.zoom-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.control-button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.control-button:hover {
+    background-color: #0056b3;
+}
+
+.control-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.page-info,
+.zoom-info {
+    font-size: 16px;
+    color: #333;
+    min-width: 120px;
+    text-align: center;
+}
+
+.pdf-viewer {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow-x: auto;
+}
+
+.pdf-document {
+    max-width: 100%;
+}
+
+.pdf-page {
+    max-width: 100%;
+    height: auto !important;
+}
+
+.loading,
+.error {
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.loading {
+    color: #007bff;
+}
+
+.error {
+    color: #dc3545;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .pdf-controls {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .navigation-controls,
+    .zoom-controls {
+        width: 100%;
+        justify-content: center;
+    }
+    .pdf-viewer {
+        padding: 10px;
+    }
+    .control-button {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+    .page-info,
+    .zoom-info {
+        font-size: 14px;
+        min-width: 100px;
+    }
+}
+
+
+/* Print styles */
+
+@media print {
+    .pdf-controls {
+        display: none;
+    }
+    .pdf-viewer {
+        box-shadow: none;
+        padding: 0;
+    }
+}
+
+.resume-container {
+    padding: 8rem 2rem 0rem 2rem;
+    background: linear-gradient(327deg, #9963fd 0%, #2e1065 100%);
+    color: #FFFFFF;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.view-count {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    font-size: 0.9rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.view-count::before {
+    content: '👁️';
+    font-size: 1.1rem;
+}
+
+.resume-controls {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.zoom-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.control-button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.control-button:hover {
+    background-color: #0056b3;
+}
+
+.reset-button {
+    background-color: #6c757d;
+}
+
+.reset-button:hover {
+    background-color: #545b62;
+}
+
+.zoom-info {
+    font-size: 16px;
+    color: #333;
+    min-width: 80px;
+    text-align: center;
+}
+
+.resume-viewer {
+    width: 100%;
+    max-width: 1000px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.resume-viewer:hover {
+    transform: translateY(-5px);
+}
+
+.resume-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.resume-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .resume-container {
+        padding: 6rem 1rem;
+    }
+    .resume-viewer {
+        padding: 15px;
+    }
+    .control-button {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+    .zoom-info {
+        font-size: 14px;
+        min-width: 60px;
+    }
+}
+
+
+/* Print styles */
+
+@media print {
+    .resume-container {
+        padding: 0;
+        background: none;
+    }
+    .resume-viewer {
+        box-shadow: none;
+        padding: 0;
+    }
+    .resume-content {
+        transform: none !important;
+    }
+}
